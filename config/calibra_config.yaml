@@ -1,0 +1,33 @@
+%YAML:1.0
+
+#common parameters
+savePath: "/home/hanlin/demo/src/cam-laser-calibra-tool/src/log/"
+bag_path: "/home/hanlin/rosbag/kalibrZhao.bag"
+
+scan_topic_name: "/scan_wj_2"
+img_topic_name: "/camera/rgb/image_raw"
+
+# tag info
+tag_type: 1 # 1: kalibr_tag, 2: apriltag
+tag_size: 0.0352 # tag size, unit meter
+tag_spacing: 0.01056 # tag spacing, only used in kalibr_tag. For details, please see kalibr tag description.
+black_border: 2 # if you use kalibr_tag black_boarder = 2; if you use apriltag black_boarder = 1
+
+#camera calibration 
+model_type: PINHOLE
+camera_name: camera
+image_width: 640 
+image_height: 480
+
+distortion_parameters:
+   k1: 0.0
+   k2: 0.0
+   p1: 0.0
+   p2: 0.0
+
+projection_parameters:
+   fx: 616.194702
+   fy: 352.115424
+   cx: 618.615906
+   cy: 285.316735
+
